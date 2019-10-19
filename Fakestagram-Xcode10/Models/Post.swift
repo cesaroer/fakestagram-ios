@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct createPost{
+struct CreatePost: Codable{
     let title: String
     let imageData: String?
     

@@ -28,6 +28,8 @@
 		57774760235B6FB2002FB2BA /* ShowPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5777475E235B6FB2002FB2BA /* ShowPostViewController.swift */; };
 		57774761235B6FB2002FB2BA /* ShowPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5777475F235B6FB2002FB2BA /* ShowPostViewController.xib */; };
 		57774763235B7ED5002FB2BA /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57774762235B7ED5002FB2BA /* PostCollectionViewCell.swift */; };
+		57774765235B8BC6002FB2BA /* CammeraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57774764235B8BC6002FB2BA /* CammeraViewController.swift */; };
+		57774767235B8DB5002FB2BA /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57774766235B8DB5002FB2BA /* UIImage+Base64.swift */; };
 		7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEB0233F1B1B0004C30D /* AppDelegate.swift */; };
 		7701BEB6233F1B1B0004C30D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB4233F1B1B0004C30D /* Main.storyboard */; };
 		7701BEB8233F1B1C0004C30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB7233F1B1C0004C30D /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		5777475E235B6FB2002FB2BA /* ShowPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPostViewController.swift; sourceTree = "<group>"; };
 		5777475F235B6FB2002FB2BA /* ShowPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowPostViewController.xib; sourceTree = "<group>"; };
 		57774762235B7ED5002FB2BA /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		57774764235B8BC6002FB2BA /* CammeraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CammeraViewController.swift; sourceTree = "<group>"; };
+		57774766235B8DB5002FB2BA /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		651326D9540E27529C285A36 /* Pods-Fakestagram-Xcode10Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram-Xcode10Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7701BEAD233F1B1B0004C30D /* Fakestagram-Xcode10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fakestagram-Xcode10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7701BEB0233F1B1B0004C30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				7701BEB7233F1B1C0004C30D /* Assets.xcassets */,
 				7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */,
 				7701BEBC233F1B1C0004C30D /* Info.plist */,
+				57774764235B8BC6002FB2BA /* CammeraViewController.swift */,
+				57774766235B8DB5002FB2BA /* UIImage+Base64.swift */,
 			);
 			path = "Fakestagram-Xcode10";
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5777474C235B6D67002FB2BA /* HttpResponse.swift in Sources */,
+				57774765235B8BC6002FB2BA /* CammeraViewController.swift in Sources */,
 				57774743235B6CBC002FB2BA /* RestClient.swift in Sources */,
 				57774760235B6FB2002FB2BA /* ShowPostViewController.swift in Sources */,
 				5777474A235B6D47002FB2BA /* StatusCode.swift in Sources */,
@@ -411,6 +418,7 @@
 				57774752235B6E31002FB2BA /* Credentials.swift in Sources */,
 				57774748235B6D1A002FB2BA /* Client.swift in Sources */,
 				5777473C235B6C38002FB2BA /* Author.swift in Sources */,
+				57774767235B8DB5002FB2BA /* UIImage+Base64.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +582,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2BL68NTA5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Fakestagram-Xcode10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,7 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2BL68NTA5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Fakestagram-Xcode10/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

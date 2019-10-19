@@ -57,20 +57,20 @@
             </objects>
             <point key="canvasLocation" x="536.79999999999995" y="305.9113300492611"/>
         </scene>
-        <!--Camera View Controller-->
+        <!--Cammera View Controller-->
         <scene sceneID="RLH-gd-M2b">
             <objects>
-                <viewController id="9My-r4-BMN" customClass="CameraViewController" customModule="Fakestagram_Xcode10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9My-r4-BMN" customClass="CammeraViewController" customModule="Fakestagram_Xcode10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eiR-ig-v9p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-nY-JmW">
-                                <rect key="frame" x="161" y="391" width="53" height="30"/>
+                                <rect key="frame" x="181" y="353" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camara"/>
                                 <connections>
-                                    <action selector="cameraBttn:" destination="9My-r4-BMN" eventType="touchUpInside" id="5ZF-aZ-d99"/>
+                                    <action selector="onTapCreate:" destination="9My-r4-BMN" eventType="touchUpInside" id="PzG-vL-6rH"/>
                                 </connections>
                             </button>
                         </subviews>
