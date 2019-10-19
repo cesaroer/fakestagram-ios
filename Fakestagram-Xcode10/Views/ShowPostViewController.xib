@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowPostViewController" customModule="Fakestagram_Xcode10" customModuleProvider="target">
+            <connections>
+                <outlet property="commentBttn" destination="dcJ-sz-IRI" id="ykC-dj-733"/>
+                <outlet property="imageView" destination="LuM-Uc-WoT" id="86C-RQ-3YV"/>
+                <outlet property="likeBttn" destination="qc9-ow-6ff" id="lwR-Xu-FnE"/>
+                <outlet property="likeCounter" destination="B3D-HR-t6t" id="uJF-xy-KWt"/>
+                <outlet property="titleLabel" destination="4Nz-fb-NZR" id="AWj-oS-vOG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LuM-Uc-WoT">
+                    <rect key="frame" x="20" y="131" width="374" height="380"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="380" id="zXB-Fq-Xfz"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="OQq-XU-8zg">
+                    <rect key="frame" x="20" y="514" width="154.5" height="41"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qc9-ow-6ff">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <state key="normal" title="&lt;3">
+                                <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onTapLike:" destination="-1" eventType="touchUpInside" id="qcn-tj-xYu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-sz-IRI">
+                            <rect key="frame" x="36" y="0.0" width="32" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <state key="normal" title="( )_">
+                                <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onTapCreateComment:" destination="-1" eventType="touchUpInside" id="UWx-Bv-KfV"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4324 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3D-HR-t6t">
+                            <rect key="frame" x="74" y="0.0" width="80.5" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolo quet sit amet consectetur adipsim" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nz-fb-NZR">
+                    <rect key="frame" x="20" y="560" width="374" height="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMZ-Q7-7bZ">
+                    <rect key="frame" x="318" y="611" width="75" height="30"/>
+                    <state key="normal" title="Comments"/>
+                    <connections>
+                        <action selector="onTapShowComments:" destination="-1" eventType="touchUpInside" id="APA-iD-3Lh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LuM-Uc-WoT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="4oF-1Z-Vhw"/>
+                <constraint firstItem="oMZ-Q7-7bZ" firstAttribute="top" secondItem="4Nz-fb-NZR" secondAttribute="bottom" constant="8" id="GM9-Rx-MaS"/>
+                <constraint firstItem="LuM-Uc-WoT" firstAttribute="trailing" secondItem="4Nz-fb-NZR" secondAttribute="trailing" id="HDK-5q-Jjr"/>
+                <constraint firstItem="LuM-Uc-WoT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="87" id="MnH-r5-Ghp"/>
+                <constraint firstItem="LuM-Uc-WoT" firstAttribute="leading" secondItem="4Nz-fb-NZR" secondAttribute="leading" id="SOJ-KT-xR4"/>
+                <constraint firstItem="4Nz-fb-NZR" firstAttribute="top" secondItem="OQq-XU-8zg" secondAttribute="bottom" constant="5" id="bMH-Ke-5JK"/>
+                <constraint firstItem="LuM-Uc-WoT" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="ioE-MU-OpI"/>
+                <constraint firstItem="LuM-Uc-WoT" firstAttribute="leading" secondItem="OQq-XU-8zg" secondAttribute="leading" id="ixP-bb-Lbq"/>
+                <constraint firstItem="oMZ-Q7-7bZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="318" id="rz0-qv-AMs"/>
+                <constraint firstItem="OQq-XU-8zg" firstAttribute="top" secondItem="LuM-Uc-WoT" secondAttribute="bottom" constant="3" id="xDN-ci-cms"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
