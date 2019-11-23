@@ -12,6 +12,8 @@
 		5766885623899582009E2403 /* CheckSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766885523899582009E2403 /* CheckSum.m */; };
 		57668859238996D9009E2403 /* IndexService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57668858238996D9009E2403 /* IndexService.swift */; };
 		5766885B2389978E009E2403 /* CheckSumTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766885A2389978E009E2403 /* CheckSumTest.swift */; };
+		5766885D2389A5E9009E2403 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766885C2389A5E9009E2403 /* PreviewView.swift */; };
+		5766885F2389A678009E2403 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766885E2389A678009E2403 /* NotificationKeys.swift */; };
 		57774738235B6BC9002FB2BA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57774737235B6BC9002FB2BA /* Account.swift */; };
 		5777473A235B6BFA002FB2BA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57774739235B6BFA002FB2BA /* Post.swift */; };
 		5777473C235B6C38002FB2BA /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5777473B235B6C38002FB2BA /* Author.swift */; };
@@ -71,6 +73,8 @@
 		57668857238995D1009E2403 /* CheckSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSum.h; sourceTree = "<group>"; };
 		57668858238996D9009E2403 /* IndexService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexService.swift; sourceTree = "<group>"; };
 		5766885A2389978E009E2403 /* CheckSumTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSumTest.swift; sourceTree = "<group>"; };
+		5766885C2389A5E9009E2403 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		5766885E2389A678009E2403 /* NotificationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		57774737235B6BC9002FB2BA /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		57774739235B6BFA002FB2BA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5777473B235B6C38002FB2BA /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				57774759235B6EF1002FB2BA /* PostCollectionViewCell.xib */,
 				57774762235B7ED5002FB2BA /* PostCollectionViewCell.swift */,
 				5777475E235B6FB2002FB2BA /* ShowPostViewController.swift */,
+				5766885C2389A5E9009E2403 /* PreviewView.swift */,
 				5777475F235B6FB2002FB2BA /* ShowPostViewController.xib */,
 				5777475C235B6F31002FB2BA /* AuthorView.swift */,
 			);
@@ -209,6 +214,7 @@
 				57774751235B6E31002FB2BA /* Credentials.swift */,
 				5777474F235B6DFC002FB2BA /* UIDevice+models.swift */,
 				57774766235B8DB5002FB2BA /* UIImage+Base64.swift */,
+				5766885E2389A678009E2403 /* NotificationKeys.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -503,7 +509,9 @@
 				5777474C235B6D67002FB2BA /* HttpResponse.swift in Sources */,
 				57774765235B8BC6002FB2BA /* CameraViewController.swift in Sources */,
 				57774743235B6CBC002FB2BA /* RestClient.swift in Sources */,
+				5766885F2389A678009E2403 /* NotificationKeys.swift in Sources */,
 				57774760235B6FB2002FB2BA /* ShowPostViewController.swift in Sources */,
+				5766885D2389A5E9009E2403 /* PreviewView.swift in Sources */,
 				5777474A235B6D47002FB2BA /* StatusCode.swift in Sources */,
 				5777474E235B6D92002FB2BA /* RequestBuilder.swift in Sources */,
 				57774740235B6C6A002FB2BA /* Like.swift in Sources */,
