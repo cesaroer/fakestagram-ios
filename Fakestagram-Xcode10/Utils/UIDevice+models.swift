@@ -6,11 +6,16 @@
 //  Copyright © 2019 unam. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-
 public extension UIDevice {
+    static let identifier: String = {
+        if let vendorId = UIDevice.current.identifierForVendor {
+            return "\(vendorId.hashValue):\(vendorId.uuidString)"
+        } else {
+            return ":\(UUID().uuidString)"
+        }
+    }()
     
     static let modelName: String = {
         var systemInfo = utsname()
@@ -88,3 +93,4 @@ public extension UIDevice {
     }()
     
 }
+

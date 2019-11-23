@@ -26,6 +26,7 @@ class CodableSerializer<T: Codable> {
             return
         }
         do {
+            debugPrint(String(data: data, encoding: .utf8))
             let json = try decoder.decode(T.self, from: data)
             DispatchQueue.main.async { result(json) }
         } catch let err {

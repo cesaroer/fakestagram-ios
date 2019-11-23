@@ -57,20 +57,21 @@
             </objects>
             <point key="canvasLocation" x="536.79999999999995" y="305.9113300492611"/>
         </scene>
-        <!--Cammera View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="RLH-gd-M2b">
             <objects>
-                <viewController id="9My-r4-BMN" customClass="CammeraViewController" customModule="Fakestagram_Xcode10" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eiR-ig-v9p">
+                <viewController id="9My-r4-BMN" customClass="CameraViewController" customModule="Fakestagram_Xcode10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eiR-ig-v9p" customClass="cammer">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-nY-JmW">
-                                <rect key="frame" x="181" y="353" width="53" height="30"/>
+                                <rect key="frame" x="151" y="353" width="112" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Camara"/>
                                 <connections>
-                                    <action selector="onTapCreate:" destination="9My-r4-BMN" eventType="touchUpInside" id="PzG-vL-6rH"/>
+                                    <action selector="onTapCreate:" destination="9My-r4-BMN" eventType="touchUpInside" id="94A-QO-ULN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cf7-VC-qDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="308"/>
+            <point key="canvasLocation" x="1282.608695652174" y="307.33695652173918"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TJ8-R8-H4v">

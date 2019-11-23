@@ -35,7 +35,15 @@ class PostViewController: UIViewController {
         }
     }
     
-
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     func loadComments(successful: @escaping ([Comment]) -> Void) {
         guard let uwrappedPost = post, let postId = uwrappedPost.id else { return }
         let url = URL(string: "https://fakestagram-api.herokuapp.com/api/v1/posts/\(postId)/comments")!

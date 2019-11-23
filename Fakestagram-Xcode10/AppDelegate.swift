@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        loadOrCreateAccount()
         return true
     }
 
@@ -38,6 +39,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func loadOrCreateAccount() {
+        if Credentials.apiToken.get() != nil { return }
+        let account = Account(id: nil, name: "Rin Go Star", avatarUrl: nil, deviceNumber:
+            UIDevice.identifier, deviceModel: UIDevice.modelName)
+        let client = RestClient<Account>(client: Client.fakestagram, basePath: "/api/v1/accounts")
+        client.create(account) { account in
+            guard let account = account, let idx = account.id else { return }
+            _ = Credentials.apiToken.set(value: idx)
+        }
     }
 
 }
