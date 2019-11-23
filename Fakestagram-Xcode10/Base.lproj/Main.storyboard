@@ -64,8 +64,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onV-78-dTi" customClass="PreviewView" customModule="Fakestagram_Xcode10" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-nY-JmW">
-                                <rect key="frame" x="151" y="353" width="112" height="30"/>
+                                <rect key="frame" x="151" y="642" width="112" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Camara"/>
@@ -78,10 +83,13 @@
                         <viewLayoutGuide key="safeArea" id="fMQ-lS-R4R"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="qli-VZ-JwO"/>
+                    <connections>
+                        <outlet property="previewView" destination="onV-78-dTi" id="8bJ-6W-ZcJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cf7-VC-qDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1283" y="395"/>
+            <point key="canvasLocation" x="1282.608695652174" y="394.56521739130437"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TJ8-R8-H4v">
