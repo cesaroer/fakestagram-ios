@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="If5-ZY-Hbn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Posts-->
+        <!--Feed-->
         <scene sceneID="lO2-2D-4VX">
             <objects>
                 <viewController id="meV-Lo-Xew" customClass="PostsViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0CG-4P-XO3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Posts" image="approval" id="SFK-Ca-EVC"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="house" catalog="system" id="SFK-Ca-EVC"/>
                     <connections>
                         <outlet property="postsCollection" destination="GUj-0c-2jm" id="gbo-Zg-ToX"/>
                     </connections>
@@ -55,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="-788.40579710144937" y="813.61607142857144"/>
         </scene>
-        <!--Create-->
+        <!--Capture-->
         <scene sceneID="U2O-nr-Rge">
             <objects>
                 <viewController id="Tt7-wh-Hav" customClass="CameraViewController" customModule="fakestagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,34 +65,42 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-RX-7j3" customClass="PreviewView" customModule="fakestagram" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
-                                        <rect key="frame" x="20" y="703" width="374" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Capture"/>
-                                        <connections>
-                                            <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="25" id="9b8-Nw-vWe"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="20" id="9ni-n1-GFK"/>
-                                    <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="dsV-RX-7j3" secondAttribute="leading" constant="20" id="gFc-M1-ufz"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Cd-Jrr">
+                                <rect key="frame" x="151" y="697" width="112" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="1NS-y2-Guy"/>
+                                    <constraint firstAttribute="width" constant="112" id="zh3-bp-sj0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="5"/>
+                                <state key="normal" image="camera.viewfinder" catalog="system">
+                                    <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="42" scale="large" weight="thin"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapCreate:" destination="Tt7-wh-Hav" eventType="touchUpInside" id="Mqj-P2-wsr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="bottom" secondItem="N1S-7H-YSJ" secondAttribute="bottom" id="0it-cv-PHD"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="Ipp-tq-VSv"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="trailing" secondItem="N1S-7H-YSJ" secondAttribute="trailing" id="edS-Iu-DTF"/>
-                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="uvD-97-5Rp"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" priority="750" constant="653" id="7LZ-mW-H9D"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" constant="151" id="X5X-bD-jen"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="top" secondItem="N1S-7H-YSJ" secondAttribute="top" id="Y72-ss-MbC"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" id="aSQ-uG-xsa"/>
+                            <constraint firstItem="N1S-7H-YSJ" firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="151" id="cPB-Au-mgH"/>
+                            <constraint firstItem="9Q4-Cd-Jrr" firstAttribute="leading" secondItem="N1S-7H-YSJ" secondAttribute="leading" constant="151" id="heu-5r-ilZ"/>
+                            <constraint firstItem="N1S-7H-YSJ" firstAttribute="bottom" secondItem="9Q4-Cd-Jrr" secondAttribute="bottom" constant="64" id="ihp-ju-p7j"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="bottom" secondItem="N1S-7H-YSJ" secondAttribute="bottom" id="kgM-aS-uV7"/>
+                            <constraint firstItem="N1S-7H-YSJ" firstAttribute="trailing" secondItem="9Q4-Cd-Jrr" secondAttribute="trailing" constant="151" id="s1h-OC-Bzo"/>
+                            <constraint firstItem="dsV-RX-7j3" firstAttribute="trailing" secondItem="N1S-7H-YSJ" secondAttribute="trailing" id="vYS-jw-D4Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N1S-7H-YSJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create" image="plus.rectangle" catalog="system" id="uax-Fe-b0Y"/>
+                    <tabBarItem key="tabBarItem" title="Capture" image="livephoto" catalog="system" id="uax-Fe-b0Y"/>
                     <connections>
                         <outlet property="previewView" destination="dsV-RX-7j3" id="1gz-57-ZkY"/>
                     </connections>
@@ -101,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="-97.101449275362327" y="813.61607142857144"/>
         </scene>
-        <!--Profile-->
+        <!--You-->
         <scene sceneID="tAT-aD-rp5">
             <objects>
                 <viewController id="ZJW-ti-eoH" sceneMemberID="viewController">
@@ -111,7 +119,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pLB-No-Bxb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="7md-cV-5d0"/>
+                    <tabBarItem key="tabBarItem" title="You" image="person" catalog="system" id="7md-cV-5d0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYl-l8-chu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,10 +130,11 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="If5-ZY-Hbn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mB-Md-8hJ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3mB-Md-8hJ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="meV-Lo-Xew" kind="relationship" relationship="viewControllers" id="h5r-ai-b30"/>
@@ -139,8 +148,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="approval" width="30" height="30"/>
-        <image name="person.circle" catalog="system" width="64" height="60"/>
-        <image name="plus.rectangle" catalog="system" width="64" height="46"/>
+        <image name="camera.viewfinder" catalog="system" width="64" height="56"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="livephoto" catalog="system" width="64" height="60"/>
+        <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>
