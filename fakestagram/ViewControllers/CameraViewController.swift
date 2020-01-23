@@ -144,16 +144,12 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         debugPrint(photo.metadata)
 
         guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
-//        service.call(image: img, title: UUID().uuidString) { postId in
-//            print("Successful!")
-//            print(postId ?? -1)
-//        }
         
         let text = imageTField.text!
-               service.call(image: img, title: text) { postId in
-                   print("success")
-                   print(postId ?? -1)
-               }
+            service.call(image: img, title: text) { postId in
+                    print("success")
+                    print(postId ?? -1)
+            }
     }
 }
 
