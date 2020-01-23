@@ -22,6 +22,19 @@ class PostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var likeBttn: UIButton!
     @IBOutlet weak var commentBttn: UIButton!
 
+    @IBAction func createLike(_ sender: UIButton) {
+        
+        let service = CreateLikeService()
+        service.call(postId: post?.id) { (post) in
+            self.likeBttn.tintColor = .magenta
+           
+            
+        }
+        
+    }
+    
+
+    
     func reset() {
         self.imageView.image = nil
         self.likeCounter.text = ""

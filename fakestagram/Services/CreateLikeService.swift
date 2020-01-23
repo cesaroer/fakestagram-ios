@@ -19,7 +19,13 @@ class CreateLikeService{
     func call(postId: Int?, success: @escaping (Int?) -> Void) -> Void {
         let newLike = CreateLike(postId: postId)
         
-        
+        client.create(id: newLike.postId, newLike) { like in
+            NotificationCenter.default.post(
+                name: NotificationKeys.didFinishPostCreation.value,
+                object: nil
+            )
+            success(like?.postId)
         }
     }
+}
 
