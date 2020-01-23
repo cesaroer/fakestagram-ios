@@ -24,9 +24,13 @@ class RestClient<T: Codable> {
     }
 
     // eg. POST /posts/
-    func create(_ data: T, success: @escaping (T?) -> Void) {
+    func create(id: Int? = nil, _ data: T, success: @escaping (T?) -> Void) {
+        
+        var bPath = basePath
+        if let userId = id { bPath += "/\(userId)/like" }
+        
         let payload = try? encoder.encode(data)
-        client.post(path: basePath, body: payload) { data in
+        client.post(path: bPath, body: payload) { data in
             CodableSerializer(data: data).async(result: success)
         }
     }
