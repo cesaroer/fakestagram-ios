@@ -21,6 +21,14 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var postsCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+//    //Adding navigation Bar
+//        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 84))
+//        navigationBar.tintColor = UIColor.black
+//        navigationBar.backgroundColor = UIColor.gray
+//        self.title = "Fakestagram"
+//        self.view.addSubview(navigationBar)
+        
+        
         postsCollection.delegate = self
         postsCollection.dataSource = self
         let nib = UINib(nibName: String(describing: PostCollectionViewCell.self), bundle: nil)
@@ -35,6 +43,8 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NotificationKeys.didFinishPostCreation.value, object: nil)
 
         // Do any additional setup after loading the view.
+        
+        
     }
 
     /*

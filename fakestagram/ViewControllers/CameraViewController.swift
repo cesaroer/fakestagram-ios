@@ -11,10 +11,19 @@ import CoreLocation
 import AVFoundation
 
 class CameraViewController: UIViewController {
+    
+    @IBOutlet weak var imageTField: UITextField!
+    var imagen: UIImage!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         enableBasicLocationServices()
         enableCameraAccess()
+   //Ocultar el keybiard
+        self.HideKeyboard()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +38,15 @@ class CameraViewController: UIViewController {
 
     let service = CreatePostService()
     @IBAction func onTapCreate(_ sender: Any) {
+        
+        //intentando mandar el titulo
+//        let text = imageTField.text!
+//        service.call(image: imagen, title: text) { postId in
+//            print("success")
+//            print(postId ?? -1)
+//        }
         print("📸")
+        // fin intento
         let settings: AVCapturePhotoSettings
         print(self.photoOutput.availablePhotoCodecTypes)
         if self.photoOutput.availablePhotoCodecTypes.contains(.hevc) {
@@ -114,18 +131,29 @@ class CameraViewController: UIViewController {
 
         session.startRunning()
     }
+    
+   
 
 }
+
+
+
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         debugPrint(photo.metadata)
 
         guard let data = photo.fileDataRepresentation(), let img = UIImage(data: data) else { return }
-        service.call(image: img, title: UUID().uuidString) { postId in
-            print("Successful!")
-            print(postId ?? -1)
-        }
+//        service.call(image: img, title: UUID().uuidString) { postId in
+//            print("Successful!")
+//            print(postId ?? -1)
+//        }
+        
+        let text = imageTField.text!
+               service.call(image: img, title: text) { postId in
+                   print("success")
+                   print(postId ?? -1)
+               }
     }
 }
 
@@ -134,4 +162,20 @@ extension CameraViewController: CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         service.update(coordinate: location.coordinate)
     }
+    
+    
+}
+
+
+extension UIViewController{
+    func HideKeyboard(){
+        //Ocultar el keyboard
+               let Tap: UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DissmissKeyboard))
+               
+               view.addGestureRecognizer(Tap)
+    }
+    
+    @objc func DissmissKeyboard(){
+           view.endEditing(true)
+       }
 }

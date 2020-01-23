@@ -27,8 +27,7 @@ class PostCollectionViewCell: UICollectionViewCell {
         let service = CreateLikeService()
         service.call(postId: post?.id) { (post) in
             self.likeBttn.tintColor = .magenta
-           
-            
+            self.likeBttn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }
         
     }

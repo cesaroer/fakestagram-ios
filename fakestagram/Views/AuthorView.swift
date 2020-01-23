@@ -15,15 +15,16 @@ class AuthorView: UIView {
 
     private let avatar: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(systemName: "person.circle.fill")
-        iv.contentMode = .scaleAspectFill
+        iv.image = UIImage(systemName: "person.circle")
+       // iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
     private let nameLbl: UILabel = {
         let lbl = UILabel()
         lbl.text = "Lorem ipsum"
-        lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        lbl.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
