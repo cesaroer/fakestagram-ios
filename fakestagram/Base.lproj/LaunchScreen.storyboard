@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+>>>>>>> cesarBranch
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +19,66 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-P3-W5t">
+                                <rect key="frame" x="0.0" y="20" width="414" height="856"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Fakestagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urJ-sA-WDc">
+                                        <rect key="frame" x="111" y="349" width="203" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="urJ-sA-WDc" secondAttribute="height" multiplier="203:46" id="ow9-Pr-f1t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                        <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by FACEBOOK" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0H-KS-Xgd">
+                                        <rect key="frame" x="139" y="686" width="129" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="y0H-KS-Xgd" secondAttribute="height" multiplier="43:8" id="2at-hC-EfA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="y0H-KS-Xgd" secondAttribute="trailing" constant="138" id="345-hI-1Ws"/>
+                                    <constraint firstItem="urJ-sA-WDc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WkH-P3-W5t" secondAttribute="leading" constant="20" symbolic="YES" id="IMJ-SG-74G"/>
+                                    <constraint firstAttribute="trailing" secondItem="urJ-sA-WDc" secondAttribute="trailing" constant="100" id="JG7-AO-niM"/>
+                                    <constraint firstItem="y0H-KS-Xgd" firstAttribute="top" secondItem="urJ-sA-WDc" secondAttribute="bottom" constant="291" id="Sm6-26-h0x"/>
+                                    <constraint firstItem="y0H-KS-Xgd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WkH-P3-W5t" secondAttribute="leadingMargin" id="ZWu-Df-SXy"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="y0H-KS-Xgd" secondAttribute="bottom" constant="124" id="hXS-VM-Y1t"/>
+                                    <constraint firstItem="urJ-sA-WDc" firstAttribute="top" secondItem="WkH-P3-W5t" secondAttribute="top" constant="349" id="jWJ-38-Hm6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WkH-P3-W5t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IRd-fe-IOJ"/>
+                            <constraint firstAttribute="bottom" secondItem="WkH-P3-W5t" secondAttribute="bottom" constant="20" symbolic="YES" id="YHC-hy-2e1"/>
+                            <constraint firstItem="WkH-P3-W5t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fKd-eJ-qeC"/>
+                            <constraint firstItem="WkH-P3-W5t" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" symbolic="YES" id="m1a-Cn-eeB"/>
+                        </constraints>
+>>>>>>> cesarBranch
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="53" y="375"/>
+=======
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+>>>>>>> cesarBranch
         </scene>
     </scenes>
 </document>

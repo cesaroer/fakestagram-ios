@@ -1,8 +1,14 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "idiom" : "iphone",
       "size" : "20x20",
+=======
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@2x-1.png",
+>>>>>>> cesarBranch
       "scale" : "2x"
     },
     {
@@ -26,8 +32,14 @@
       "scale" : "2x"
     },
     {
+<<<<<<< HEAD
       "idiom" : "iphone",
       "size" : "40x40",
+=======
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@2x.png",
+>>>>>>> cesarBranch
       "scale" : "3x"
     },
     {
@@ -71,8 +83,14 @@
       "scale" : "2x"
     },
     {
+<<<<<<< HEAD
       "idiom" : "ipad",
       "size" : "76x76",
+=======
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@1x.png",
+>>>>>>> cesarBranch
       "scale" : "1x"
     },
     {
@@ -81,8 +99,14 @@
       "scale" : "2x"
     },
     {
+<<<<<<< HEAD
       "idiom" : "ipad",
       "size" : "83.5x83.5",
+=======
+      "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-83.5x83.5@2x.png",
+>>>>>>> cesarBranch
       "scale" : "2x"
     },
     {

@@ -2,8 +2,13 @@
 //  AppDelegate.swift
 //  fakestagram
 //
+<<<<<<< HEAD
 //  Created by LuisE on 9/24/19.
 //  Copyright © 2019 3zcurdia. All rights reserved.
+=======
+//  Created by Cesar Vargas D4 on 11/11/19.
+//  Copyright © 2019 unam. All rights reserved.
+>>>>>>> cesarBranch
 //
 
 import UIKit
@@ -13,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+<<<<<<< HEAD
+=======
+        StorageType.permanent.ensureExists()
+        StorageType.cache.ensureExists()
+        loadOrCreateAccount()
+>>>>>>> cesarBranch
         return true
     }
 
@@ -30,6 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+<<<<<<< HEAD
 
 }
 
+=======
+    func loadOrCreateAccount() {
+        if Credentials.apiToken.get() != nil { return }
+        let account = Account(id: nil, name: "Robert", deviceNumber: UIDevice.identifier, deviceModel: UIDevice.modelName)
+        let client = RestClient<Account>(client: Client.fakestagram, basePath: "/api/v1/accounts")
+        client.create(account) { account in
+            guard let account = account, let idx = account.id else { return }
+            _ = Credentials.apiToken.set(value: idx)
+        }
+    }
+}
+>>>>>>> cesarBranch
